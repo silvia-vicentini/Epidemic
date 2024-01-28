@@ -5,3 +5,14 @@ This program requires the additional library SFML, you can install it by running
 ```bash
 $ sudo apt install libsfml-dev
 ```
+## Compile and run
+To compile the program run the commands:
+```bash
+$ cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+$ cmake --build build
+```
+If you want to develop changes to the program I suggest to compile in Debug mode:
+```bash
+$ cmake -B build -S . -DCMAKE_BUILD_TYPE=Debug
+$ cmake --build build
+```
