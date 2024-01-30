@@ -119,7 +119,6 @@ void Simulation::calculate(const std::vector<int>& grid,
         neighborSum = calculate_neighborSum(x, y, neighborSum, grid);
         std::uniform_real_distribution<double> probDistribution(0.0, 1.0);
         double probNumber = probDistribution(eng);
-        std::cout << std::setprecision(17) << probNumber << std::endl;
         double prob = probability(neighborSum);
         if (probNumber < prob) {
           gridNext[current] = 1;
@@ -129,8 +128,6 @@ void Simulation::calculate(const std::vector<int>& grid,
       else if (grid[current] == 1) {
         std::uniform_real_distribution<double> probDistribution(0.0, 1.0);
         double probNumber = probDistribution(eng);
-        std::cout << "Probabilità 1 : " << probDistribution << '\n';
-
         if (probNumber <= gamma_) {
           gridNext[current] = 2;
         }
