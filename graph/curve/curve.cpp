@@ -70,24 +70,24 @@ std::vector<sf::CircleShape> Curve::generate_dots(
 
 std::vector<int> Curve::S_values() const {
   std::vector<int> S_values;
-  for (int i = 0; i <= T_; ++i) {
-    S_values.push_back(population_state_[i].S);
+  for (auto it=population_state_.begin(), last=population_state_.end();it!=last;++it) {
+    S_values.push_back(it->S);
   }
   return S_values;
 }
 
 std::vector<int> Curve::I_values() const {
   std::vector<int> I_values;
-  for (int i = 0; i <= T_; ++i) {
-    I_values.push_back(population_state_[i].I);
+  for (auto it=population_state_.begin(), last=population_state_.end();it!=last;++it) {
+    I_values.push_back(it->.I);
   }
   return I_values;
 }
 
 std::vector<int> Curve::R_values() const {
   std::vector<int> R_values;
-  for (int i = 0; i <= T_; ++i) {
-    R_values.push_back(population_state_[i].R);
+  for (auto it=population_state_.begin(), last=population_state_.end();it!=last;++it) {
+    R_values.push_back(it->R);
   }
   return R_values;
 }
